@@ -104,8 +104,16 @@ getent group render
 ```
 
 You should see something like `render:x:993:` — the number in the middle
-(here `993`) is what you need — there may be a name after it, ignore the name. Open `.env` in any text editor and set
-`RENDER_GID=` to your number. Leave the other lines alone for now.
+(here `993`) is what you need — there may be a name after it, ignore the name. Open the settings file in a text editor. If you are
+working in a terminal (including over SSH), nano is the easiest:
+
+```
+nano .env
+```
+
+Use the arrow keys to reach the line starting `RENDER_GID=` and make it
+your number. Then press **Ctrl-O**, then **Enter** to save, then
+**Ctrl-X** to exit. Leave the other lines alone.
 
 ## Step 4 — Download the model (19.7 GB — this is the long step)
 
