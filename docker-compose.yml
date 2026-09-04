@@ -1,0 +1,26 @@
+services:
+  qwen36:
+    build: .
+    image: qwen36-dual-arc:local
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:8080"
+    volumes:
+      - ./models:/models:ro
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - "${RENDER_GID:?run 'getent group render' and put the number in .env}"
+    command:
+      - "-m"
+      - "/models/${MODEL_FILE:?set MODEL_FILE in .env}"
+      - "-sm"
+      - "layer"
+      - "-ngl"
+      - "99"
+      - "-c"
+      - "${CONTEXT:-32768}"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "8080"

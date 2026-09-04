@@ -1,0 +1,19 @@
+This project packages and documents third-party work:
+
+- Model: Qwen3.6-35B-A3B by the Qwen team (Alibaba Cloud), Apache License 2.0.
+  https://huggingface.co/Qwen
+
+- Quantized GGUF: produced and published by bartowski (imatrix-calibrated),
+  Apache License 2.0.
+  https://huggingface.co/bartowski/Qwen_Qwen3.6-35B-A3B-GGUF
+  File used: Qwen_Qwen3.6-35B-A3B-IQ4_XS.gguf
+  SHA256: afc7238af403ed454b7846454091b5e38b07575bdbb64c3e86777414dde4193c
+
+- Inference engine: llama.cpp by ggml-org contributors, MIT License.
+  https://github.com/ggml-org/llama.cpp
+  Built at commit 178a6c449 (build 10069).
+
+The compose files, documentation, and measurements in this repository are
+released under the Apache License 2.0 (see LICENSE).
+
+Support the quant author: https://ko-fi.com/bartowski
