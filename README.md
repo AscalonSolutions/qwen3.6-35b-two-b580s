@@ -1,7 +1,7 @@
 # Qwen3.6-35B on two Intel Arc GPUs
 
 Run a 35-billion-parameter language model — Qwen3.6-35B-A3B — split across
-two Intel Arc graphics cards, using one downloaded file and one command.
+two Intel Arc graphics cards that use Battlemage architecture, using one downloaded file and one command.
 You get a local, private, OpenAI-compatible API endpoint with up to a
 65,536-token context window.
 
